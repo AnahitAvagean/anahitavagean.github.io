@@ -1,0 +1,30 @@
+body {
+    font-family: cursive;
+    margin:  20px;
+    background-color:rgb(250, 234, 204);
+}
+section {
+background-color: rgb(255, 200, 138);
+color:rgb(0, 0, 0);
+text-align: center;
+
+}
+section article p {
+background-color: rgb(253, 212, 184);
+
+}
+section > p {
+background-color: rgba(241, 188, 149, 0.815);
+color:black;
+
+}
+#news {
+background-color: rgb(236, 159, 71);
+
+}
+.short-text {
+    display:inline;
+}
+.lorem-ipsum {
+text-align: justify;
+}
