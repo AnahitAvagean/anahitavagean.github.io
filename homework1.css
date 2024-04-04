@@ -1,0 +1,136 @@
+.a {
+    text-decoration: none;
+    color: black;
+    margin-left: 10px;
+    font-family: cursive;
+}
+.b {
+    text-decoration: none;
+    color: black;
+    margin-left: 8px;
+    font-size: 24px;
+    font-family: cursive;
+}
+.head1{
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+.namebar {
+    background-color:rgb(70, 115, 187);
+    color:white;
+    font-family: cursive;
+    text-align: center;
+    font-size: 33px;
+    padding: 0.5px 0;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+.div1 {
+margin-top: 72px;
+background-color: rgba(201, 234, 245, 0.973);
+display: flex;
+align-items: center;
+justify-content: center;
+height: 210px;
+margin-left: 70px;
+width: 850px;
+}
+.bio {
+    background-color: rgb(182, 210, 241);
+height: 650px;
+width: 850px;
+margin-left: 70px;
+margin-top: 70px;
+}
+.text {
+    font-family: cursive;
+    text-align: center;
+    font-size: 16px;
+    margin: 20px 120px;
+}
+.smt {
+    font-family: cursive;
+    text-align: center;
+    font-size: 29px;
+ text-align: center;
+}
+.hobbies {
+    font-family: cursive;
+    font-size: 16px;
+    margin: 20px 120px; 
+    background-color: rgb(215, 250, 248);
+    text-align: center;
+    height: 210px;
+    width: 850px;
+    margin-left: 70px;
+    margin-top: 70px;
+    margin-bottom: 100px;
+}
+.interests {
+border: solid 2px;
+height: 30px;
+width: 280px;
+margin-left: 270px;
+border-color: rgb(92, 90, 133);
+border-radius: 10px;
+margin-bottom: -11px;
+}
+.footer {
+    display: flex;
+    font-family: Arial, Roboto;
+    align-items: center;
+    font-size: 13px;
+    justify-content: space-between;
+    color: white;
+    background-color: rgb(24, 22, 22);
+}
+.youtube {
+    padding: 8px 11px;
+    background-color: rgb(236, 51, 51);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    margin-left: 2px;
+}
+.facebook {
+    padding: 8px 11px;
+    background-color: rgb(68, 113, 236);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    margin-left: 2px;
+}
+.x {
+    padding: 8px 9px;
+    background-color: rgb(72, 72, 75);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    margin-left: 2px;
+}
+.in {
+    padding: 8px 11px;
+    background-color: rgb(87, 207, 255);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    margin-left: 2px;
+}
+.ok {
+    padding: 8px 9px;
+    background-color: rgb(248, 176, 41);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    margin-right: 12px;
+    margin-left: 2px;
+}
+.about {
+background-color: rgb(209, 209, 209);
+right: 0;
+margin-left: 1000px;
+di
+}
