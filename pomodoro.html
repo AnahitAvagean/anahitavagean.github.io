@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>365 Days</title>
+    <link rel="stylesheet" href="pomodoro.css">
+</head>
+<body>
+    <header>
+      <div class="container">
+        <a href="/general.html"><h1>365 Days</h1></a>
+        <nav>
+            <ul>
+                <li><a href="/todo/todo.html">To Do List</a></li>
+                <li><a href active>Pomodoro</a></li>
+                <li><a href="/year-goal/year-goal.html">Year Goals</a></li>
+                <li><a href="/video/video.html">Free Training Video</a></li>
+                <li><a href="/random/random.html">Random Facts</a></li>
+               
+            </ul>
+        </nav>
+    </div>
+    </header>
+    <section id="pomodoro">
+      <h2>Pomodoro Timer</h2>
+      <div id="timer">
+          <span id="minutes">25</span>:<span id="seconds">00</span>
+      </div>
+      <button id="start">Start</button>
+      <button id="reset">Reset</button>
+  </section>
+</main>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      // Pomodoro Timer functionality
+      const startButton = document.getElementById('start');
+      const resetButton = document.getElementById('reset');
+      const minutesDisplay = document.getElementById('minutes');
+      const secondsDisplay = document.getElementById('seconds');
+
+      let timer;
+      let isRunning = false;
+      let timeRemaining = 25 * 60; // 25 minutes in seconds
+
+      startButton.addEventListener('click', function() {
+          if (isRunning) {
+              clearInterval(timer);
+              startButton.textContent = 'Start';
+          } else {
+              timer = setInterval(updateTimer, 1000);
+              startButton.textContent = 'Pause';
+          }
+          isRunning = !isRunning;
+      });
+
+      resetButton.addEventListener('click', function() {
+          clearInterval(timer);
+          isRunning = false;
+          timeRemaining = 25 * 60;
+          minutesDisplay.textContent = '25';
+          secondsDisplay.textContent = '00';
+          startButton.textContent = 'Start';
+      });
+
+      function updateTimer() {
+          if (timeRemaining > 0) {
+              timeRemaining--;
+              const minutes = Math.floor(timeRemaining / 60);
+              const seconds = timeRemaining % 60;
+              minutesDisplay.textContent = minutes < 10 ? '0' + minutes : minutes;
+              secondsDisplay.textContent = seconds < 10 ? '0' + seconds : seconds;
+          } else {
+              clearInterval(timer);
+              alert('Time is up!');
+              resetTimer();
+          }
+      }
+
+      function resetTimer() {
+          clearInterval(timer);
+          isRunning = false;
+          timeRemaining = 25 * 60;
+          minutesDisplay.textContent = '25';
+          secondsDisplay.textContent = '00';
+          startButton.textContent = 'Start';
+      }
+  });
+</script>
+</body>
+</html>
+</body>
+</html>

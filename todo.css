@@ -1,0 +1,179 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  background: #93b896;
+  color: #fff;
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+header h1 {
+margin-left: -150px;
+margin-right: 100px;
+
+}
+
+header nav {
+  margin-left: auto;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  margin-left: 1rem;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+header nav ul li a:hover {
+  background: #7c997b;
+  color: #fff;
+  border-radius: 12px;
+}
+
+main {
+  padding: 1rem;
+  max-width: 1100px;
+  margin: 1rem auto;
+}
+
+/* To Do List Styles */
+#todo {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+}
+
+#todo h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+#todoForm {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+#todoForm input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#todoForm button {
+  padding: 0.5rem 1rem;
+  background: #618264;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#todoForm button:hover {
+  background: #93b696;
+}
+
+#todoList {
+  list-style: none;
+  padding: 0;
+}
+
+#todoList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9f9f9;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border-left: 4px solid #618264;
+}
+
+#todoList li.completed {
+  text-decoration: line-through;
+  color: #797676;
+}
+
+#todoList li button {
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#todoList li button.done {
+  background: #27ae60;
+}
+
+#todoList li button.done:hover {
+  background: #2ecc71;
+}
+
+#todoList li button.delete:hover {
+  background: #c0392b;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+h2 {
+  color: #618264;
+}
+#celebration {
+  text-align: center;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+}
+
+#celebration.hidden {
+  display: none;
+}
+
+#celebration h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+#celebration p {
+  font-size: 1.2rem;
+  color: #333;
+}
+button {
+  margin-left: 5px;
+}

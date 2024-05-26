@@ -1,0 +1,204 @@
+/* General Styles */
+body {
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  background: #93b896;
+  color: #fff;
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+header h1 {
+margin-left: -150px;
+margin-right: 100px;
+
+}
+
+header nav {
+  margin-left: auto;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  margin-left: 1rem;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+header nav ul li a:hover {
+  background: #7c997b;
+  color: #fff;
+  border-radius: 12px;
+}
+
+main {
+  padding: 1rem;
+  max-width: 1100px;
+  margin: 1rem auto;
+}
+/* Year Goals Styles */
+#year-goals {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 2rem;
+  text-align: center;
+}
+
+#year-goals h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #7c997b;
+}
+
+#goalForm {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+#goalInput {
+  padding: 0.5rem;
+  font-size: 1rem;
+  width: 60%;
+  margin-right: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#goalForm button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background: #7c997b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#goalForm button:hover {
+  background: #546654;
+}
+
+#goalsList {
+  list-style: none;
+  padding: 0;
+}
+
+.goal-item {
+  background: #f9f9f9;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: left;
+  position: relative;
+}
+
+.goal-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.sub-goals {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.sub-goals li {
+  margin-left: 1.5rem;
+  padding-left: 0.5rem;
+  position: relative;
+}
+
+.sub-goals li::before {
+  content: '-';
+  position: absolute;
+  left: -0.5rem;
+}
+
+.sub-goal-form {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.sub-goal-input {
+  padding: 0.3rem;
+  font-size: 0.9rem;
+  flex: 1;
+  margin-right: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.sub-goal-form button {
+  padding: 0.3rem 0.7rem;
+  font-size: 0.9rem;
+  background: #7c997b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.sub-goal-form button:hover {
+  background: #4a5a49;
+}
+
+.goal-done {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #27ae60;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.3rem 0.7rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.goal-done:hover {
+  background: #2ecc71;
+}
+
+.completed {
+  background: #d4edda;
+  border-color: #c3e6cb;
+  text-decoration: line-through;
+}
+a {
+  text-decoration: none;
+  color: white;
+}

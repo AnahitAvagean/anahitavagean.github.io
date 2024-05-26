@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="video.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a href="/general.html"><h1>365 Days</h1></a>
+        <nav>
+            <ul>
+                <li><a href="/todo/todo.html">To Do List</a></li>
+                <li><a href="/pomodoro/pomodoro.html">Pomodoro</a></li>
+                <li><a href="/year-goal/year-goal.html">Year Goals</a></li>
+                <li><a href active>Free Training Video</a></li>
+                <li><a href="/random/random.html">Random Facts</a></li>
+               
+            </ul>
+        </nav>
+    </div>
+</header>
+<section id="training-video">
+  <h2>Free Training Videos</h2>
+  <div id="video-container" class="grid-container">
+      <!-- Videos will be dynamically added here -->
+  </div>
+</section>
+
+<script>
+ document.addEventListener('DOMContentLoaded', function() {
+    const videoContainer = document.getElementById('video-container');
+
+    // Array of video URLs
+    const videoURLs = [
+    "https://www.youtube.com/embed/watch?v=wfOp0lsCXAY&list=PLifnQOsGyOSRMYndHku6pNlLYckbBuOGU&index=1" ,
+          "https://www.youtube.com/embed/watch?v=DqKFjgGvbnU&list=PLifnQOsGyOSRMYndHku6pNlLYckbBuOGU&index=2",
+          "https://www.youtube.com/embed/watch?v=FgtB4fWIjRE&list=PLifnQOsGyOSRMYndHku6pNlLYckbBuOGU&index=3",
+          "https://www.youtube.com/embed/watch?v=ZjVoShBahRg&list=PLifnQOsGyOSRMYndHku6pNlLYckbBuOGU&index=4",
+          "https://www.youtube.com/embed/watch?v=N8DhIndTi6E&list=PLifnQOsGyOSRMYndHku6pNlLYckbBuOGU&index=5",
+          "https://www.youtube.com/embed/watch?v=QYrupSGZ3B8&list=PLifnQOsGyOSRMYndHku6pNlLYckbBuOGU&index=6",
+          "https://www.youtube.com/embed/watch?v=SLE72I-2lv8&list=PLifnQOsGyOSRMYndHku6pNlLYckbBuOGU&index=7",
+          "https://www.youtube.com/embed/watch?v=TzATuJefUkc&list=PLifnQOsGyOSRMYndHku6pNlLYckbBuOGU&index=8",
+          "https://www.youtube.com/embed/watch?v=7NHOzZyDqDw&list=PLifnQOsGyOSRMYndHku6pNlLYckbBuOGU&index=9",
+          "https://www.youtube.com/embed/watch?v=wc0PV2z_04o&list=PLifnQOsGyOSRMYndHku6pNlLYckbBuOGU&index=10",
+          "https://www.youtube.com/embed/watch?v=x01Xv_Vqxw8&list=PLifnQOsGyOSRMYndHku6pNlLYckbBuOGU&index=11",
+          "https://www.youtube.com/embed/watch?v=fVJ1QS2_K4c&list=PLifnQOsGyOSRMYndHku6pNlLYckbBuOGU&index=12",
+          "https://www.youtube.com/embed/watch?v=thpmu3i1-Kg&list=PLifnQOsGyOSRMYndHku6pNlLYckbBuOGU&index=13",
+          "https://www.youtube.com/embed/watch?v=IwayrUN9R4A&list=PLifnQOsGyOSRMYndHku6pNlLYckbBuOGU&index=14",
+          "https://www.youtube.com/embed/watch?v=Pk0USzDxfsg&list=PLifnQOsGyOSRMYndHku6pNlLYckbBuOGU&index=15",
+          "https://www.youtube.com/embed/watch?v=rtWs2CJ6H90&list=PLifnQOsGyOSRMYndHku6pNlLYckbBuOGU&index=16",
+          "https://www.youtube.com/embed/watch?v=iWR3se1Y1UU&list=PLifnQOsGyOSRMYndHku6pNlLYckbBuOGU&index=17",
+          "https://www.youtube.com/embed/watch?v=um1KoEkjk6I&list=PLifnQOsGyOSRMYndHku6pNlLYckbBuOGU&index=18"
+        
+    ];
+
+    // Array to track watched videos
+    const watchedVideos = [];
+
+    // Function to create and append video elements
+    function createVideoElement(videoURL) {
+        const videoFrame = document.createElement('iframe');
+        videoFrame.src = videoURL;
+        videoFrame.allowFullscreen = true;
+        videoFrame.frameBorder = 0;
+        videoFrame.className = 'video-frame';
+        
+        // Check if video URL is in watchedVideos array
+        if (watchedVideos.includes(videoURL)) {
+            videoFrame.classList.add('watched'); // Add watched class if it has been watched
+        }
+        
+        videoFrame.addEventListener('click', function() {
+            if (!watchedVideos.includes(videoURL)) {
+                watchedVideos.push(videoURL); // Add video URL to watchedVideos array
+                videoFrame.classList.add('watched'); // Add watched class to the video
+            }
+        });
+        
+        videoContainer.appendChild(videoFrame);
+    }
+
+    // Add each video to the container
+    videoURLs.forEach(videoURL => {
+        createVideoElement(videoURL);
+    });
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Facts</title>
+  <link rel="stylesheet" href="random.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a href="/general.html"><h1>365 Days</h1></a>
+        <nav>
+            <ul>
+                <li><a href="/todo/todo.html">To Do List</a></li>
+                <li><a href="/pomodoro/pomodoro.html">Pomodoro</a></li>
+                <li><a href="/year-goal/year-goal.html">Year Goals</a></li>
+                <li><a href="/video/video.html">Free Training Video</a></li>
+                <li><a href active>Random Facts</a></li>
+               
+            </ul>
+        </nav>
+    </div>
+</header>
+<section id="random-facts">
+  <h2>Random Facts</h2>
+  <div id="animal-fact">
+      <h3>Animal Fact</h3>
+      <p id="animal-fact-text">Loading...</p>
+  </div>
+  <div id="plant-fact">
+      <h3>Plant Fact</h3>
+      <p id="plant-fact-text">Loading...</p>
+  </div>
+  <div id="person-fact">
+      <h3>Famous Person Fact</h3>
+      <p id="person-fact-text">Loading...</p>
+  </div>
+</section>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const animalFactText = document.getElementById('animal-fact-text');
+  const plantFactText = document.getElementById('plant-fact-text');
+  const personFactText = document.getElementById('person-fact-text');
+
+  // Array of random facts
+  const animalFacts = [
+      "An ostrich's eye is bigger than its brain.",
+      "Kangaroos can't walk backwards.",
+      "Penguins can jump up to 6 feet in the air.",
+      // Add more animal facts
+  ];
+
+  const plantFacts = [
+      "Bamboo can grow up to 35 inches in a single day.",
+      "The world's largest flower, Rafflesia arnoldii, can grow up to 3 feet in diameter.",
+      "The oldest living plant is a bristlecone pine, which is over 5,000 years old.",
+      // Add more plant facts
+  ];
+
+  const personFacts = [
+      "Neil Armstrong's footprint on the moon will probably stay there for 100 million years.",
+      "Thomas Edison was afraid of the dark.",
+      "Abraham Lincoln was a licensed bartender.",
+      // Add more person facts
+  ];
+
+  // Function to get a random fact from an array
+  function getRandomFact(array) {
+      return array[Math.floor(Math.random() * array.length)];
+  }
+
+  // Display random facts
+  animalFactText.textContent = getRandomFact(animalFacts);
+  plantFactText.textContent = getRandomFact(plantFacts);
+  personFactText.textContent = getRandomFact(personFacts);
+});
+</script>
+</body>
+</html>

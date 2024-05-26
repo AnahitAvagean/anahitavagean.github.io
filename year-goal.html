@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>365 Days</title>
+    <link rel="stylesheet" href="year-goal.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+          <a href="/general.html"><h1>365 Days</h1></a>
+            <nav>
+                <ul>
+                    <li><a href="/todo/todo.html">To do list</a></li>
+                    <li><a href="/pomodoro/pomodoro.html">Pomodoro</a></li>
+                    <li><a href active>Year Goals</a></li>
+                    <li><a href="/video/video.html">Free Training Video</a></li>
+                    <li><a href="/video/video.html">Random Facts</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+        <section id="year-goals">
+            <h2>Year Goals</h2>
+            <form id="goalForm">
+                <input type="text" id="goalInput" placeholder="Enter your goal" required>
+                <button type="submit">Add Goal</button>
+            </form>
+            <ul id="goalsList"></ul>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const goalForm = document.getElementById('goalForm');
+            const goalInput = document.getElementById('goalInput');
+            const goalsList = document.getElementById('goalsList');
+
+            goalForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const goalText = goalInput.value.trim();
+                if (goalText !== '') {
+                    addGoal(goalText);
+                    goalInput.value = '';
+                }
+            });
+
+            function addGoal(goalText) {
+                const goalItem = document.createElement('li');
+                goalItem.classList.add('goal-item');
+
+                const goalTitle = document.createElement('span');
+                goalTitle.textContent = goalText;
+                goalTitle.classList.add('goal-title');
+                goalItem.appendChild(goalTitle);
+
+                const subGoalsList = document.createElement('ul');
+                subGoalsList.classList.add('sub-goals');
+                goalItem.appendChild(subGoalsList);
+
+                const subGoalForm = document.createElement('form');
+                subGoalForm.classList.add('sub-goal-form');
+                subGoalForm.innerHTML = `
+                    <input type="text" class="sub-goal-input" placeholder="Enter sub-goal" required>
+                    <button type="submit">Add Sub-goal</button>
+                `;
+                goalItem.appendChild(subGoalForm);
+
+                const doneButton = document.createElement('button');
+                doneButton.textContent = 'Done';
+                doneButton.classList.add('goal-done');
+                goalItem.appendChild(doneButton);
+
+                goalsList.appendChild(goalItem);
+
+                subGoalForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const subGoalInput = subGoalForm.querySelector('.sub-goal-input');
+                    const subGoalText = subGoalInput.value.trim();
+                    if (subGoalText !== '') {
+                        addSubGoal(subGoalsList, subGoalText);
+                        subGoalInput.value = '';
+                    }
+                });
+
+                doneButton.addEventListener('click', function() {
+                    goalItem.classList.toggle('completed');
+                });
+            }
+
+            function addSubGoal(subGoalsList, subGoalText) {
+                const subGoalItem = document.createElement('li');
+                subGoalItem.textContent = subGoalText;
+                subGoalsList.appendChild(subGoalItem);
+            }
+        });
+    </script>
+</body>
+</html>
